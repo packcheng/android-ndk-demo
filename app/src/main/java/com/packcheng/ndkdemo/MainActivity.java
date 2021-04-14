@@ -1,20 +1,32 @@
 package com.packcheng.ndkdemo;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.databinding.DataBindingUtil;
+
+import com.packcheng.ndkdemo.databinding.ActivityMainBinding;
+import com.packcheng.ndkdemo.jni.JniRoot;
+import com.packcheng.ndkdemo.jni.StaticLink;
+import com.packcheng.ndkdemo.util.LogUtil;
 
 public class MainActivity extends AppCompatActivity {
+
+    ActivityMainBinding mBinding;
+
+    JniRoot root = new JniRoot();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        mBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        // Example of a call to a native method
-        TextView tv = findViewById(R.id.sample_text);
-        tv.setText("aaa");
+        final StaticLink staticLink = new StaticLink();
+        mBinding.btnStaticLink.setOnClickListener(v -> {
+            String result = staticLink.helloFromCPP("packcheng");
+            LogUtil.w("hello from cpp: " + result);
+            staticLink.sayHelloToCPP("packcheng", 18, new String[]{"12345", "23456", "34567"});
+        });
     }
 
 }

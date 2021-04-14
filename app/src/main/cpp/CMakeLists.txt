@@ -10,7 +10,7 @@ project("ndkdemo")
 add_library(
         native-lib
         SHARED
-        jni-root.cpp)
+        jni-root.cpp static-link.cpp)
 
 find_library(
         log-lib
