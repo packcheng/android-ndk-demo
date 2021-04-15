@@ -9,7 +9,7 @@ import android.util.Log;
  * @since 2021/4/13 6:08 PM
  */
 public class LogUtil {
-    static final String TAG = "LogUtil";
+    static final String TAG = "JNI/NDK-LogUtil";
 
     public static void d(String msg) {
         Log.d(TAG, msg);
