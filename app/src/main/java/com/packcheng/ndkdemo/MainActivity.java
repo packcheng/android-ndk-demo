@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import com.packcheng.ndkdemo.databinding.ActivityMainBinding;
+import com.packcheng.ndkdemo.jni.DynamicLink;
 import com.packcheng.ndkdemo.jni.JniRoot;
 import com.packcheng.ndkdemo.jni.StaticLink;
 import com.packcheng.ndkdemo.util.LogUtil;
@@ -26,6 +27,13 @@ public class MainActivity extends AppCompatActivity {
             String result = staticLink.helloFromCPP("packcheng");
             LogUtil.w("hello from cpp: " + result);
             staticLink.sayHelloToCPP("packcheng", 18, new String[]{"12345", "23456", "34567"});
+        });
+
+        mBinding.btnDynamicLink.setOnClickListener(v -> {
+            DynamicLink dynamicLink = new DynamicLink();
+            LogUtil.w("hello from cpp: " + dynamicLink.dynamicHelloFromCPP("zbc"));
+            boolean success = dynamicLink.dynamicSayHelloToCpp("zbc", 169.9);
+            LogUtil.w("success: " + success);
         });
     }
 

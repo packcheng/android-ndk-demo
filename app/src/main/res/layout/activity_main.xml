@@ -20,6 +20,14 @@
                 android:textAllCaps="false"
                 android:textColor="@color/white" />
 
+            <Button
+                android:id="@+id/btn_dynamic_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DynamicLink"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
