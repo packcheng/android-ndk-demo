@@ -124,6 +124,14 @@ Java_com_packcheng_ndkdemo_jni_ClassOperate_create(JNIEnv *env, jclass clazz) {
         return NULL;
     }
 
+    jfieldID id_f_age = env->GetFieldID(clazz, "age", "I");
+    if(nullptr == id_f_age){
+        LOG_E("Error on get filed id: age")
+        return NULL;
+    }
+
+    env->SetIntField(instance, id_f_age, 99);
+
     return instance;
 }
 
@@ -131,4 +139,22 @@ extern "C"
 JNIEXPORT void JNICALL
 Java_com_packcheng_ndkdemo_jni_ClassOperate_update(JNIEnv *env, jobject thiz, jobject operate) {
     LOG_D("Java_com_packcheng_ndkdemo_jni_ClassOperate_update")
+
+    jclass target_class = env->GetObjectClass(thiz);
+    if(nullptr == target_class){
+        LOG_E("Error on get object class")
+        return;
+    }
+
+    jfieldID id_f_age = env->GetFieldID(target_class, "age", "I");
+    if(nullptr == id_f_age){
+        LOG_E("Error on get filed id: age")
+        return;
+    }
+
+    jint src_age = env->GetIntField(operate, id_f_age);
+    env->SetIntField(thiz, id_f_age, src_age);
+    LOG_I("Done set age from target bean")
+
+    env->DeleteLocalRef(target_class);
 }
