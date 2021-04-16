@@ -1,4 +1,5 @@
 #include <android/log.h>
+#include <jni.h>
 //
 // 公共头文件
 // Created by packcheng on 2021/4/13.
@@ -6,6 +7,8 @@
 
 #ifndef NDKDEMO_MY_JNI_H
 #define NDKDEMO_MY_JNI_H
+
+extern JavaVM *javaVm;
 
 #define TAG "JNI/NDK"
 

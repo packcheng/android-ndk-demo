@@ -9,6 +9,7 @@ import com.packcheng.ndkdemo.databinding.ActivityMainBinding;
 import com.packcheng.ndkdemo.jni.ClassOperate;
 import com.packcheng.ndkdemo.jni.DynamicLink;
 import com.packcheng.ndkdemo.jni.JniRoot;
+import com.packcheng.ndkdemo.jni.NativeThread;
 import com.packcheng.ndkdemo.jni.StaticLink;
 import com.packcheng.ndkdemo.util.LogUtil;
 
@@ -56,6 +57,12 @@ public class MainActivity extends AppCompatActivity {
             LogUtil.w("update: " + classOperate.toString());
             ClassOperate classOperate1 = ClassOperate.create();
             LogUtil.w("new obj: " + classOperate1.toString());
+        });
+
+        mBinding.btnNativeThread.setOnClickListener(v -> {
+            NativeThread nativeThread = new NativeThread();
+            nativeThread.nativeInit();
+            LogUtil.d("Create NativeThread and call nativeInit");
         });
     }
 
