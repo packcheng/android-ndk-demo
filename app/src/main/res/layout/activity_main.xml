@@ -44,6 +44,22 @@
                 android:textAllCaps="false"
                 android:textColor="@color/white" />
 
+            <Button
+                android:id="@+id/btn_product_consumer_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ProductConsumer-Start"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_product_consumer_stop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ProductConsumer-Stop"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

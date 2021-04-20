@@ -10,6 +10,7 @@ import com.packcheng.ndkdemo.jni.ClassOperate;
 import com.packcheng.ndkdemo.jni.DynamicLink;
 import com.packcheng.ndkdemo.jni.JniRoot;
 import com.packcheng.ndkdemo.jni.NativeThread;
+import com.packcheng.ndkdemo.jni.ProductConsumer;
 import com.packcheng.ndkdemo.jni.StaticLink;
 import com.packcheng.ndkdemo.util.LogUtil;
 
@@ -18,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBinding mBinding;
 
     JniRoot root = new JniRoot();
+    ProductConsumer productConsumer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,6 +66,28 @@ public class MainActivity extends AppCompatActivity {
             nativeThread.nativeInit();
             LogUtil.d("Create NativeThread and call nativeInit");
         });
+
+        mBinding.btnProductConsumerStart.setOnClickListener(v -> {
+            productConsumer = new ProductConsumer();
+            productConsumer.start();
+            LogUtil.d("Call ProductConsumer's method: start");
+        });
+
+        mBinding.btnProductConsumerStop.setOnClickListener(v -> {
+            if (null == productConsumer) {
+                return;
+            }
+            productConsumer.stop();
+            LogUtil.d("Call ProductConsumer's method: stop");
+        });
+
     }
 
+    @Override
+    protected void onDestroy() {
+        if (null != productConsumer) {
+            productConsumer.stop();
+        }
+        super.onDestroy();
+    }
 }
