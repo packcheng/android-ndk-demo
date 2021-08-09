@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity2">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_static_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="StaticLink"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_dynamic_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DynamicLink"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_class_operate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ClassOperate"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_native_thread"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NativeThread"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_product_consumer_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ProductConsumer-Start"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btn_product_consumer_stop"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ProductConsumer-Stop"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>

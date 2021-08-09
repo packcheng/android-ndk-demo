@@ -1,7 +1,7 @@
 # android-ndk-demo
 JNI/NDK练习
 
-# NativeCrash定位
+## NativeCrash定位
 1. arm-linux-androideabi-addr2line  
 作用: 定位出错位置  
 位置: /ndk/toolchains/aarch64-linux-android-4.9/prebuilt/darwin-x86_64/bin  
@@ -30,3 +30,10 @@ JNI/NDK练习
     adb logcat > crash.log
     ndk-stack -sym /aa/bb/xxx.so -dump crash.log
 ```
+
+## 目录结构
+- T1 
+- T2 
+
+## 重要笔记
+

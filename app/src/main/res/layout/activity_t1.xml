@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity">
+    tools:context=".t1.T1Activity">
 
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsl_root"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -11,14 +12,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-
-            <Button
-                android:id="@+id/btn_t1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="T1"
-                android:textAllCaps="false"
-                android:textColor="@color/white" />
 
         </LinearLayout>
 
