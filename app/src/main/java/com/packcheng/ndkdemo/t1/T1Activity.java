@@ -23,4 +23,10 @@ public class T1Activity extends BaseActivity<ActivityT1Binding> {
     protected int getContentResId() {
         return R.layout.activity_t1;
     }
+
+    @Override
+    protected void initView() {
+        super.initView();
+        mBinding.btnSayHelloToNdk.setOnClickListener(v->t1.sayHelloToNdk("zbc"));
+    }
 }

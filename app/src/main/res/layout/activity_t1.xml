@@ -13,6 +13,14 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <Button
+                android:id="@+id/btn_sayHelloToNdk"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="sayHelloToNdk"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

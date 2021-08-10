@@ -1,5 +1,3 @@
-#include <android/log.h>
-#include <jni.h>
 //
 // 公共头文件
 // Created by packcheng on 2021/4/13.
@@ -8,12 +6,15 @@
 #ifndef NDKDEMO_MY_JNI_H
 #define NDKDEMO_MY_JNI_H
 
+#include <android/log.h>
+#include <jni.h>
+
 #ifndef IS_RELEASE
-#define IS_RELEASE true // 是否正式的环境
+#define IS_RELEASE 0
 #if IS_RELEASE
-#define RELEASE // 正式环境定义的宏
+#define RELEASE
 #else
-#define DEBUG // debug环境定义的宏
+#define DEBUG
 #endif
 #endif
 

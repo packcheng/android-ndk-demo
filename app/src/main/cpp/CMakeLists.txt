@@ -7,10 +7,16 @@ cmake_minimum_required(VERSION 3.10.2)
 
 project("ndkdemo")
 
+# T工程之前备份
+#add_library(
+#        native-lib
+#        SHARED
+#        jni-root.cpp static-link.cpp my-jni.h dynamic_method.h dynamic_method.cpp class_operate.cpp native_thread.cpp product_consumer.cpp)
+
 add_library(
         native-lib
         SHARED
-        jni-root.cpp static-link.cpp my-jni.h dynamic_method.h dynamic_method.cpp class_operate.cpp native_thread.cpp product_consumer.cpp)
+        T1/T1.h my-jni.h T1/T1.cpp)
 
 find_library(
         log-lib

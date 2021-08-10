@@ -1,6 +1,7 @@
 package com.packcheng.ndkdemo;
 
 import com.packcheng.ndkdemo.databinding.ActivityMainBinding;
+import com.packcheng.ndkdemo.jni.JniRoot;
 import com.packcheng.ndkdemo.t1.T1Activity;
 
 /**
@@ -11,9 +12,7 @@ import com.packcheng.ndkdemo.t1.T1Activity;
  */
 public class MainActivity extends BaseActivity<ActivityMainBinding> {
 
-    ActivityMainBinding mBinding;
-
-//    JniRoot root = new JniRoot();
+    JniRoot root = new JniRoot();
 
     @Override
     protected int getContentResId() {
