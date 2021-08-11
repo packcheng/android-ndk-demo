@@ -14,12 +14,8 @@
 
             <Button
                 android:id="@+id/btn_t1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="T1"
-                android:textAllCaps="false"
-                android:textColor="@color/white" />
-
+                style="@style/CommonButton"
+                android:text="T1" />
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

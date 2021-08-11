@@ -8,9 +8,21 @@ class T1 {
     private String name = "zbc";
     private static int age = 19;
 
-    public native void sayHelloToNdk(String name);
-
     public int addCallByNdk(int a, int b) {
         return a + b;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public static int getAge() {
+        return age;
+    }
+
+    public native void changeName();
+
+    public native static void changeAge();
+
+    public native void sayHelloToNdk(String name);
 }

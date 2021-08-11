@@ -15,11 +15,19 @@
 
             <Button
                 android:id="@+id/btn_sayHelloToNdk"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="sayHelloToNdk"
-                android:textAllCaps="false"
-                android:textColor="@color/white" />
+                style="@style/CommonButton"
+                android:text="sayHelloToNdk" />
+
+            <Button
+                android:id="@+id/btn_change_filed"
+
+                style="@style/CommonButton"
+                android:text="ChangeFiled" />
+
+            <Button
+                android:id="@+id/btn_change_static_filed"
+                style="@style/CommonButton"
+                android:text="ChangeStaticFiled" />
 
         </LinearLayout>
 
