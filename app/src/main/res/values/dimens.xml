@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="edge_xl">20dp</dimen>
+    <dimen name="edge_l">15dp</dimen>
+    <dimen name="edge_m">10dp</dimen>
+    <dimen name="edge_s">5dp</dimen>
+
+    <dimen name="page_edge_top">@dimen/edge_l</dimen>
+    <dimen name="page_edge_left">@dimen/edge_l</dimen>
+    <dimen name="page_edge_right">@dimen/edge_l</dimen>
+    <dimen name="page_edge_bottom">@dimen/edge_l</dimen>
+</resources>

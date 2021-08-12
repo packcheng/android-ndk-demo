@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".t1.T1Activity">
+    tools:context=".TemperActivity">
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nsl_root"
@@ -16,21 +16,9 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/btn_sayHelloToNdk"
+                android:id="@+id/btn_"
                 style="@style/CommonButton"
-                android:text="sayHelloToNdk" />
-
-            <Button
-                android:id="@+id/btn_change_filed"
-
-                style="@style/CommonButton"
-                android:text="ChangeFiled" />
-
-            <Button
-                android:id="@+id/btn_change_static_filed"
-                style="@style/CommonButton"
-                android:text="ChangeStaticFiled" />
-
+                android:text="Temper" />
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

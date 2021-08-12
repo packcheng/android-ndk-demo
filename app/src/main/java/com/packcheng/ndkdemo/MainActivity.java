@@ -3,6 +3,7 @@ package com.packcheng.ndkdemo;
 import com.packcheng.ndkdemo.databinding.ActivityMainBinding;
 import com.packcheng.ndkdemo.jni.JniRoot;
 import com.packcheng.ndkdemo.t1.T1Activity;
+import com.packcheng.ndkdemo.t2.T2Activity;
 
 /**
  * JNI/NDK练习工程
@@ -23,5 +24,6 @@ public class MainActivity extends BaseActivity<ActivityMainBinding> {
     protected void initView() {
         super.initView();
         mBinding.btnT1.setOnClickListener(v -> T1Activity.startActivity(MainActivity.this));
+        mBinding.btnT2.setOnClickListener(v -> T2Activity.startActivity(MainActivity.this));
     }
 }

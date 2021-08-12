@@ -5,7 +5,9 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:paddingStart="@dimen/page_edge_left"
+        android:paddingEnd="@dimen/page_edge_right">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -16,6 +18,11 @@
                 android:id="@+id/btn_t1"
                 style="@style/CommonButton"
                 android:text="T1" />
+
+            <Button
+                android:id="@+id/btn_t2"
+                style="@style/CommonButton"
+                android:text="T2" />
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

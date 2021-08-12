@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".t1.T1Activity">
+    tools:context=".t2.T2Activity">
 
     <androidx.core.widget.NestedScrollView
         android:id="@+id/nsl_root"
@@ -16,21 +16,14 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/btn_sayHelloToNdk"
+                android:id="@+id/btn_testArrayAction"
                 style="@style/CommonButton"
-                android:text="sayHelloToNdk" />
+                android:text="testArray" />
 
             <Button
-                android:id="@+id/btn_change_filed"
-
+                android:id="@+id/btn_testInsertObject"
                 style="@style/CommonButton"
-                android:text="ChangeFiled" />
-
-            <Button
-                android:id="@+id/btn_change_static_filed"
-                style="@style/CommonButton"
-                android:text="ChangeStaticFiled" />
-
+                android:text="testNewObject" />
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

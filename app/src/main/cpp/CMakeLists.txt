@@ -16,7 +16,7 @@ project("ndkdemo")
 add_library(
         native-lib
         SHARED
-        T1/T1.h my-jni.h T1/T1.cpp)
+        my-jni.h T1/T1.h T1/T1.cpp T2/T2.h T2/T2.cpp)
 
 find_library(
         log-lib

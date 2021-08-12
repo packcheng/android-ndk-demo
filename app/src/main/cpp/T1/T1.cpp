@@ -18,7 +18,9 @@ Java_com_packcheng_ndkdemo_t1_T1_sayHelloToNdk(JNIEnv *env, jobject thiz, jstrin
     jclass p_t1 = env->GetObjectClass(thiz);
     jmethodID p_method_id = env->GetMethodID(p_t1, "addCallByNdk", "(II)I");
     jint result = env->CallIntMethod(thiz, p_method_id, 10, 20);
-    LOG_W("The result of method add(10,20) is %d\n",result);
+    LOG_W("The result of method add(10,20) is %d\n",result)
+    
+    env->ReleaseStringUTFChars(name, p_name);
 }
 
 extern "C"
