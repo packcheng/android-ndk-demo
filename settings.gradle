@@ -1,2 +1,4 @@
 include ':app'
 rootProject.name = "NdkDemo"
+include ':fmode'
+include ':base'

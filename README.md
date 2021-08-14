@@ -30,10 +30,3 @@ JNI/NDK练习
     adb logcat > crash.log
     ndk-stack -sym /aa/bb/xxx.so -dump crash.log
 ```
-
-## 目录结构
-- T1 Ndk与Java方法回调/Ndk修改Java属性和静态属性
-- T2 数组操作、创建对象
-
-## 重要笔记
-
