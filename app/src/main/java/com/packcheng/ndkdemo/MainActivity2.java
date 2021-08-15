@@ -1,5 +1,6 @@
 package com.packcheng.ndkdemo;
 
+import com.packcheng.base.BaseActivity;
 import com.packcheng.ndkdemo.databinding.ActivityMain2Binding;
 import com.packcheng.ndkdemo.jni.ClassOperate;
 import com.packcheng.ndkdemo.jni.DynamicLink;
@@ -7,7 +8,7 @@ import com.packcheng.ndkdemo.jni.JniRoot;
 import com.packcheng.ndkdemo.jni.NativeThread;
 import com.packcheng.ndkdemo.jni.ProductConsumer;
 import com.packcheng.ndkdemo.jni.StaticLink;
-import com.packcheng.ndkdemo.util.LogUtil;
+import com.packcheng.base.LogUtil;
 
 /**
  * JNI/NDK T工程之前备份

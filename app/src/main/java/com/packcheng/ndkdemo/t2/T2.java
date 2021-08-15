@@ -1,6 +1,6 @@
 package com.packcheng.ndkdemo.t2;
 
-import com.packcheng.ndkdemo.util.LogUtil;
+import com.packcheng.base.LogUtil;
 
 /**
  * @author packcheng <a href="mailto:packcheng_jo@outlook.com">Contact me.</a>

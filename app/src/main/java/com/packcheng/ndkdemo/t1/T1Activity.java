@@ -3,10 +3,10 @@ package com.packcheng.ndkdemo.t1;
 import android.content.Context;
 import android.content.Intent;
 
-import com.packcheng.ndkdemo.BaseActivity;
+import com.packcheng.base.BaseActivity;
 import com.packcheng.ndkdemo.R;
 import com.packcheng.ndkdemo.databinding.ActivityT1Binding;
-import com.packcheng.ndkdemo.util.LogUtil;
+import com.packcheng.base.LogUtil;
 
 /**
  * Ndk与Java方法回调

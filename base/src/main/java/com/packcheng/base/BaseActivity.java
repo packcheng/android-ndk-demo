@@ -1,4 +1,4 @@
-package com.packcheng.ndkdemo;
+package com.packcheng.base;
 
 import android.os.Bundle;
 

@@ -5,6 +5,8 @@ import android.widget.Toast;
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
 
+import org.fmod.FMOD;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
@@ -28,14 +30,39 @@ class FModePlayer {
 
 
     private final FmodeActivity activity;
+    private volatile boolean isPlaying;
 
     public FModePlayer(@NonNull FmodeActivity activity) {
         this.activity = activity;
+        FMOD.init(activity.getApplicationContext());
+    }
+
+    public void startPlay(String filePath, @PlayMode int mode) {
+        if (isPlaying) {
+            activity.runOnUiThread(() -> Toast.makeText(activity, "请等待播放完毕", Toast.LENGTH_SHORT).show());
+            return;
+        }
+        play(filePath, mode);
     }
 
     private native void play(String filePath, @PlayMode int mode);
 
+    private void onStartPlay() {
+        isPlaying = true;
+    }
+
     private void onPlayEnd(String result) {
-        Toast.makeText(activity, result, Toast.LENGTH_SHORT).show();
+        isPlaying = false;
+        activity.runOnUiThread(() -> Toast.makeText(activity, result, Toast.LENGTH_SHORT).show());
+    }
+
+    public boolean isPlaying() {
+        return isPlaying;
+    }
+
+    public void destroy() {
+        if (FMOD.checkInit()) {
+            FMOD.close();
+        }
     }
 }

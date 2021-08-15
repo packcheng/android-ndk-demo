@@ -3,6 +3,7 @@ package com.packcheng.ndkdemo;
 import android.content.Context;
 import android.content.Intent;
 
+import com.packcheng.base.BaseActivity;
 import com.packcheng.ndkdemo.databinding.ActivityTempBinding;
 
 /**

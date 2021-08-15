@@ -14,10 +14,16 @@ android {
         testInstrumentationRunner rootProject.ext.android.androidJUnitRunner
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-        externalNativeBuild{
-            cmake{
+        externalNativeBuild {
+            cmake {
                 cppFlags ""
+                // 指定生成的so的架构
+                abiFilters "arm64-v8a"
             }
+        }
+        ndk {
+            // 指定打入APK的so架构
+            abiFilters "arm64-v8a"
         }
     }
 
@@ -37,9 +43,13 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

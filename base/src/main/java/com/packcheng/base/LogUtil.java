@@ -1,4 +1,4 @@
-package com.packcheng.ndkdemo.util;
+package com.packcheng.base;
 
 import android.util.Log;
 

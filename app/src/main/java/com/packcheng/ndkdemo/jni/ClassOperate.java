@@ -1,6 +1,6 @@
 package com.packcheng.ndkdemo.jni;
 
-import com.packcheng.ndkdemo.util.LogUtil;
+import com.packcheng.base.LogUtil;
 
 /**
  * ndk与Java互调

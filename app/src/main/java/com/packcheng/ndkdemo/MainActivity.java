@@ -1,5 +1,6 @@
 package com.packcheng.ndkdemo;
 
+import com.packcheng.base.BaseActivity;
 import com.packcheng.ndkdemo.databinding.ActivityMainBinding;
 import com.packcheng.ndkdemo.jni.JniRoot;
 import com.packcheng.ndkdemo.t1.T1Activity;

@@ -3,10 +3,10 @@ package com.packcheng.ndkdemo.t2;
 import android.content.Context;
 import android.content.Intent;
 
-import com.packcheng.ndkdemo.BaseActivity;
+import com.packcheng.base.BaseActivity;
 import com.packcheng.ndkdemo.R;
 import com.packcheng.ndkdemo.databinding.ActivityT2Binding;
-import com.packcheng.ndkdemo.util.LogUtil;
+import com.packcheng.base.LogUtil;
 
 /**
  * @author packcheng
