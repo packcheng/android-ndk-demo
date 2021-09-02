@@ -10,15 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.NdkDemo">
-        <activity
-            android:name=".t1.T1Activity"
-            android:exported="true" />
-        <activity
-            android:name=".t2.T2Activity"
-            android:exported="true" />
-        <activity
-            android:name=".t3.T3Activity"
-            android:exported="true" />
+        <activity android:name=".t1.T1Activity" />
+        <activity android:name=".t2.T2Activity" />
+        <activity android:name=".t3.T3Activity" />
+        <activity android:name=".t4.T4Activity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
