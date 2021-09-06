@@ -7,6 +7,9 @@ cmake_minimum_required(VERSION 3.10.2)
 
 project("mylib")
 
+# 导入头文件
+include_directories("mylib")
+
 # 批量导入所有源文件
 file(GLOB allCPP *.c *.h *.cpp)
 

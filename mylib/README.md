@@ -113,6 +113,9 @@ $NDK_GCC_V8 $NDK_LIB_CONFIG_V8 -fPIC -shared $SRC_FILE -o $DES_FILE_V8
 
 > 1. 批量导入所有源文件和头文件
 > ```shell
+> # 导入头文件
+> include_directories("mylib")
+>
 > # 批量导入所有源文件
 > file(GLOB allCPP *.c *.h *.cpp)
 > 
