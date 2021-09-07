@@ -3,3 +3,4 @@ rootProject.name = "NdkDemo"
 include ':fmode'
 include ':base'
 include ':mylib'
+include ':cmake'
